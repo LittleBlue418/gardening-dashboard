@@ -1,0 +1,62 @@
+{
+  "upcomingEvents": [
+    {
+      "date": "Monday, Apr 27",
+      "events": [
+        { "title": "Ultrasound appointment", "type": "future" }
+      ]
+    },
+    {
+      "date": "Wednesday, Apr 29",
+      "events": [
+        { "title": "Knitting evening with Jo", "type": "future" }
+      ]
+    },
+    {
+      "date": "Saturday, May 2",
+      "events": [
+        { "title": "Aisling's wedding", "type": "future" }
+      ]
+    }
+  ],
+  "prioritisedTasks": [
+    {
+      "id": "priority0",
+      "title": "Assemble wedding skirt"
+    },
+    {
+      "id": "priority1",
+      "title": "New mockup for wedding corset"
+    },
+    {
+      "id": "priority2",
+      "title": "Make pattern for wedding waistcoat"
+    },
+    {
+      "id": "priority3",
+      "title": "Book dentist appointment",
+      "isPriority2": true
+    }
+  ],
+  "generalTodo": [
+    { "id": "personal0", "title": "Move the firewood" },
+    { "id": "personal1", "title": "Recycle scraps from deck building" },
+    { "id": "personal2", "title": "Organize bookcase" },
+    { "id": "personal3", "title": "Empty sauna" },
+    { "id": "personal4", "title": "Unblock wood chipper" },
+    { "id": "personal5", "title": "Mount small greenhouse" },
+    { "id": "personal6", "title": "Take down Christmas decorations in office" },
+    { "id": "personal7", "title": "Unpack the office boxes" },
+    { "id": "personal8", "title": "Dye hair" }
+  ],
+  "gardenTodo": [
+    { "id": "garden0", "title": "Start tomato seeds indoors" },
+    { "id": "garden1", "title": "Start cucumber seeds indoors" },
+    { "id": "garden2", "title": "Start pumpkin seeds indoors" },
+    { "id": "garden3", "title": "Start broccoli & cauliflower indoors" },
+    { "id": "garden4", "title": "Direct sow: radishes, spinach, peas" },
+    { "id": "garden5", "title": "Direct sow: carrots, chard" },
+    { "id": "garden6", "title": "Plant onion sets (~2 boxes)" },
+    { "id": "garden7", "title": "Finish planting remaining potatoes" }
+  ]
+}

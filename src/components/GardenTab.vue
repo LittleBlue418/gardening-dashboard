@@ -8,119 +8,57 @@
       </div>
 
       <div class="section-title">🌱 Direct Sow</div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🔴</span>
+      <div
+        v-for="(plant, index) in gardenData.aprilPlanting.directSow"
+        :key="`april-direct-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Radishes <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Quick crop, 25-30 days</div>
-        </div>
-      </div>
-      <div class="plant-item need-seeds">
-        <span class="plant-emoji">🥬</span>
-        <div>
-          <div class="plant-name">Spinach</div>
-          <div class="plant-details">Cold-tolerant</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🫛</span>
-        <div>
-          <div class="plant-name">Peas <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Love cool weather</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥕</span>
-        <div>
-          <div class="plant-name">Carrots <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Thin as they grow</div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
 
       <div class="section-title">🌱 Seedlings to Plant</div>
-      <div class="seedling-item">
-        <div class="plant-name">🥔 Potatoes</div>
-        <div class="plant-details">More to plant (location TBD)</div>
+      <div
+        v-for="(plant, index) in gardenData.aprilPlanting.seedlingsToPlant"
+        :key="`april-seedling-${index}`"
+        class="seedling-item"
+      >
+        <div class="plant-name">{{ plant.emoji }} {{ plant.name }}</div>
+        <div class="plant-details">{{ plant.details }}</div>
       </div>
 
       <div class="section-title">🏠 Started Indoors</div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🫑</span>
+      <div
+        v-for="(plant, index) in gardenData.aprilPlanting.startedIndoors"
+        :key="`april-started-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Bell Peppers ✓ Started</div>
-          <div class="plant-details">Growing indoors → transplant late May to greenhouse</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🍅</span>
-        <div>
-          <div class="plant-name">Tomatoes ✓ Started</div>
-          <div class="plant-details">Started: Apr 26 → transplant late May to greenhouse</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🥒</span>
-        <div>
-          <div class="plant-name">Cucumbers ✓ Started</div>
-          <div class="plant-details">Started: Apr 26 → transplant late May to greenhouse</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🎃</span>
-        <div>
-          <div class="plant-name">Pumpkins ✓ Started</div>
-          <div class="plant-details">Started: Apr 26 → transplant late May to boxes</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🥦</span>
-        <div>
-          <div class="plant-name">Broccoli ✓ Started</div>
-          <div class="plant-details">Started: Apr 26 → transplant late May to boxes</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🌈</span>
-        <div>
-          <div class="plant-name">Chard ✓ Started</div>
-          <div class="plant-details">Started: Apr 26 → transplant late May to boxes</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🫘</span>
-        <div>
-          <div class="plant-name">Borlotti Beans ✓ Started</div>
-          <div class="plant-details">Started: Apr 26 → transplant late May to boxes</div>
+          <div class="plant-name">{{ plant.name }}</div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
 
       <div class="section-title">🌱 Planted (Direct Sow)</div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🥕</span>
+      <div
+        v-for="(plant, index) in gardenData.aprilPlanting.planted"
+        :key="`april-planted-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Parsnips ✓ Planted</div>
-          <div class="plant-details">Planted: Apr 26 in Front 3 • Harvest: Oct</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🫛</span>
-        <div>
-          <div class="plant-name">Sugar Snap Peas ✓ Planted</div>
-          <div class="plant-details">Planted: Apr 26 in Front 3 • Harvest: Late Jul</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🥕</span>
-        <div>
-          <div class="plant-name">Parsnips ✓ Planted</div>
-          <div class="plant-details">Planted: Apr 26 in Front 4 • Harvest: Oct</div>
-        </div>
-      </div>
-      <div class="plant-item started">
-        <span class="plant-emoji">🥬</span>
-        <div>
-          <div class="plant-name">Beetroot ✓ Planted</div>
-          <div class="plant-details">Planted: Apr 26 in Front 4 • Harvest: Late Jul</div>
+          <div class="plant-name">{{ plant.name }}</div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
     </div>
@@ -133,92 +71,53 @@
       </div>
 
       <div class="section-title">🌱 Transplant Outdoors (after last frost ~May 20)</div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🍅</span>
+      <div
+        v-for="(plant, index) in gardenData.mayPlanting.transplantOutdoors"
+        :key="`may-transplant-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Tomatoes <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">From indoor seedlings → greenhouse</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥒</span>
-        <div>
-          <div class="plant-name">Cucumbers <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">From indoor seedlings → greenhouse</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🎃</span>
-        <div>
-          <div class="plant-name">Pumpkins <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">From indoor seedlings → boxes</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥦</span>
-        <div>
-          <div class="plant-name">Broccoli <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">From indoor seedlings → boxes</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🫑</span>
-        <div>
-          <div class="plant-name">Bell Peppers <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">From seedlings → greenhouse</div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
 
       <div class="section-title">🌱 Direct Sow</div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🫘</span>
+      <div
+        v-for="(plant, index) in gardenData.mayPlanting.directSow"
+        :key="`may-direct-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Broad Beans <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Sow directly outside</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥬</span>
-        <div>
-          <div class="plant-name">Beetroot <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Succession sowing</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥕</span>
-        <div>
-          <div class="plant-name">Carrots <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Succession sowing</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🔴</span>
-        <div>
-          <div class="plant-name">Radishes <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Succession sowing</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🧅</span>
-        <div>
-          <div class="plant-name">Spring Onions <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Quick growing</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🫘</span>
-        <div>
-          <div class="plant-name">Borlotti Beans <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Sow after last frost, warm weather crop</div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
 
       <div class="section-title">🏠 Start Indoors</div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🧅</span>
+      <div
+        v-for="(plant, index) in gardenData.mayPlanting.startIndoors"
+        :key="`may-start-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Leeks <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Start indoors → transplant Jul-Aug</div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
     </div>
@@ -231,55 +130,36 @@
       </div>
 
       <div class="section-title">🏠 Start Indoors (for fall harvest)</div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥬</span>
+      <div
+        v-for="(plant, index) in gardenData.junePlanting.startIndoors"
+        :key="`june-start-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Kale <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Start indoors → transplant Jul for fall harvest</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🧅</span>
-        <div>
-          <div class="plant-name">Leeks <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Start indoors → transplant Jul-Aug</div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
 
       <div class="section-title">🌱 Direct Sow (succession plantings)</div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥕</span>
+      <div
+        v-for="(plant, index) in gardenData.junePlanting.directSow"
+        :key="`june-direct-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
         <div>
-          <div class="plant-name">Carrots <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Succession sowing for fall harvest</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥬</span>
-        <div>
-          <div class="plant-name">Beetroot <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Succession sowing</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🔴</span>
-        <div>
-          <div class="plant-name">Radishes <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Quick succession crop</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🫛</span>
-        <div>
-          <div class="plant-name">Peas <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Second sowing for late summer</div>
-        </div>
-      </div>
-      <div class="plant-item have-seeds">
-        <span class="plant-emoji">🥬</span>
-        <div>
-          <div class="plant-name">Pak Choi <span class="seed-indicator">📦</span></div>
-          <div class="plant-details">Fast growing, cool season crop</div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
     </div>
@@ -291,32 +171,20 @@
         Harvesting Plan
       </div>
 
-      <div class="section-title">June 2026</div>
-      <div class="plant-item">
-        <span class="plant-emoji">🧄</span>
-        <div>
-          <div class="plant-name">Garlic</div>
-          <div class="plant-details">Late June</div>
+      <template v-for="(plants, month) in gardenData.harvestingPlan" :key="month">
+        <div class="section-title">{{ month }}</div>
+        <div
+          v-for="(plant, index) in plants"
+          :key="`harvest-${month}-${index}`"
+          class="plant-item"
+        >
+          <span class="plant-emoji">{{ plant.emoji }}</span>
+          <div>
+            <div class="plant-name">{{ plant.name }}</div>
+            <div class="plant-details">{{ plant.details }}</div>
+          </div>
         </div>
-      </div>
-
-      <div class="section-title">July 2026</div>
-      <div class="plant-item">
-        <span class="plant-emoji">🥔</span>
-        <div>
-          <div class="plant-name">Potatoes</div>
-          <div class="plant-details">Late July (6 boxes)</div>
-        </div>
-      </div>
-
-      <div class="section-title">August 2026</div>
-      <div class="plant-item">
-        <span class="plant-emoji">🧅</span>
-        <div>
-          <div class="plant-name">Onions</div>
-          <div class="plant-details">Early August (2 boxes)</div>
-        </div>
-      </div>
+      </template>
     </div>
 
     <!-- Column 8: Gardening Shopping -->
@@ -326,9 +194,13 @@
         Gardening Shopping
       </div>
 
-      <div class="shopping-item">
-        <span class="plant-emoji">🥬</span>
-        <div class="shopping-item-text">Spinach seeds</div>
+      <div
+        v-for="(item, index) in gardenData.shoppingList"
+        :key="`shopping-${index}`"
+        class="shopping-item"
+      >
+        <span class="plant-emoji">{{ item.emoji }}</span>
+        <div class="shopping-item-text">{{ item.name }}</div>
       </div>
     </div>
 
@@ -340,85 +212,13 @@
       </div>
 
       <div class="seed-grid">
-        <div class="seed-item">
-          <span class="seed-name">🥬 Beetroot</span>
-          <span class="seed-quantity">×6</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🥦 Broccoli</span>
-          <span class="seed-quantity">×3</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🫑 Bell Peppers</span>
-          <span class="seed-quantity">×5</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🫘 Broad Beans</span>
-          <span class="seed-quantity">×1</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🫘 Borlotti Beans</span>
-          <span class="seed-quantity">×3</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🌿 Rainbow Chard</span>
-          <span class="seed-quantity">×1</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">Carrots</span>
-          <span class="seed-quantity">×6</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🌶️ Chilli Pepper</span>
-          <span class="seed-quantity">×2</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🥒 Cucumbers</span>
-          <span class="seed-quantity">×1</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🥬 Kale</span>
-          <span class="seed-quantity">×1</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🧅 Leeks</span>
-          <span class="seed-quantity">×4</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🧅 Spring Onions</span>
-          <span class="seed-quantity">×1</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🫛 Sugar Snap Peas</span>
-          <span class="seed-quantity">×4</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🫛 Peas</span>
-          <span class="seed-quantity">×2</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🥬 Pak Choi</span>
-          <span class="seed-quantity">×2</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🥕 Parsnips</span>
-          <span class="seed-quantity">×1</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">Pumpkins</span>
-          <span class="seed-quantity">×5</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">Radishes</span>
-          <span class="seed-quantity">×2</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🍅 Tomatoes</span>
-          <span class="seed-quantity">×8</span>
-        </div>
-        <div class="seed-item">
-          <span class="seed-name">🎃 Squash</span>
-          <span class="seed-quantity">×1</span>
+        <div
+          v-for="(seed, index) in gardenData.seedInventory"
+          :key="`seed-${index}`"
+          class="seed-item"
+        >
+          <span class="seed-name">{{ seed.name }}</span>
+          <span class="seed-quantity">{{ seed.quantity }}</span>
         </div>
       </div>
     </div>
@@ -426,7 +226,7 @@
 </template>
 
 <script setup lang="ts">
-// No interactive elements in this component, all static data
+import gardenData from '../data/gardenData.json'
 </script>
 
 <style scoped>

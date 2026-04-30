@@ -9,11 +9,13 @@
           ⚠️ Plants Not Yet Allocated to Timeline
         </div>
         <div class="unallocated-grid">
-          <div class="unallocated-plant">🫘 Broad Beans</div>
-          <div class="unallocated-plant">🥦 Broccoli</div>
-          <div class="unallocated-plant">🥬 Kale</div>
-          <div class="unallocated-plant">🥬 Spinach</div>
-          <div class="unallocated-plant">🧅 Spring Onions</div>
+          <div
+            v-for="(plant, index) in calendarData.unallocatedPlants"
+            :key="`unallocated-${index}`"
+            class="unallocated-plant"
+          >
+            {{ plant }}
+          </div>
         </div>
       </div>
 
@@ -33,302 +35,146 @@
           <!-- Seedlings Section -->
           <div class="timeline-section-header">🌱 Seedlings (Start Indoors)</div>
 
-          <div class="timeline-label">🍅 Tomato</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`tomato-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar greenhouse tomatoes" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🥒 Cucumber</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`cucumber-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar greenhouse" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🫑 Bell Pepper</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`pepper-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar greenhouse peppers" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🎃 Pumpkin</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`pumpkin-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar started pumpkins" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🥦 Broccoli</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`broccoli-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar started" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🌈 Chard</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`chard-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar started chard" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🫘 Borlotti Beans</div>
-          <div class="timeline-row">
-            <div v-for="n in 49" :key="`beans-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar started beans" style="left: 12.5%; width: 14.3%;">Growing → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🧅 Leeks</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`leeks-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned leeks" style="left: 14.3%; width: 28.6%;">Start → Transplant</div>
-          </div>
-
-          <div class="timeline-label">🥬 Kale</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`kale-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned kale" style="left: 28.6%; width: 14.3%;">Start → Transplant</div>
-          </div>
+          <template v-for="(seedling, index) in calendarData.seedlings" :key="`seedling-${index}`">
+            <div class="timeline-label">{{ seedling.label }}</div>
+            <div class="timeline-row">
+              <div
+                v-for="n in (seedling.months || 49)"
+                :key="`${index}-${n}`"
+                class="timeline-month"
+                :class="{ 'border-right': n % 4 === 0 }"
+              ></div>
+              <div
+                v-for="(bar, barIndex) in seedling.bars"
+                :key="`bar-${index}-${barIndex}`"
+                class="crop-bar"
+                :class="bar.class"
+                :style="bar.style"
+              >
+                {{ bar.label }}
+              </div>
+            </div>
+          </template>
 
           <!-- Garden Beds -->
           <div class="timeline-section-header">🌸 Front Garden</div>
 
-          <!-- Front Garden Boxes -->
-          <div class="timeline-label">🌸 Front 1</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front1-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar onions" style="left: 10.7%; width: 46.4%;">🧅 Onions</div>
-            <div class="crop-bar planned beetroot" style="left: 57.1%; width: 42.9%;">Beetroot</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 2</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front2-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar onions" style="left: 10.7%; width: 46.4%;">🧅 Onions</div>
-            <div class="crop-bar planned peas" style="left: 57%; width: 43%;">Sugar Snap Peas</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 3</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front3-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar parsnips stacked-top" style="left: 12.5%; width: 87.5%;">🥕 Parsnips</div>
-            <div class="crop-bar peas stacked-bottom" style="left: 12.5%; width: 44.6%;">🫛 Sugar Snap Peas</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 4</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front4-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar parsnips stacked-top" style="left: 12.5%; width: 87.5%;">🥕 Parsnips</div>
-            <div class="crop-bar beetroot stacked-bottom" style="left: 12.5%; width: 41.1%;">🥬 Beetroot</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 5</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front5-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned pumpkins stacked-top" style="left: 21.4%; width: 64.3%;">Pumpkins</div>
-            <div class="crop-bar planned chard stacked-bottom" style="left: 21.4%; width: 60.7%;">Chard</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 6</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front6-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned pumpkins stacked-top" style="left: 21.4%; width: 64.3%;">Pumpkins</div>
-            <div class="crop-bar planned chard stacked-bottom" style="left: 21.4%; width: 60.7%;">Chard</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 7</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front7-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned pumpkins stacked-triple-top" style="left: 21.4%; width: 64.3%;">Pumpkins</div>
-            <div class="crop-bar planned broccoli stacked-triple-middle" style="left: 21.4%; width: 35.7%;">Broccoli</div>
-            <div class="crop-bar planned chard stacked-triple-bottom" style="left: 21.4%; width: 60.7%;">Chard</div>
-          </div>
-
-          <div class="timeline-label">🌸 Front 8</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`front8-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned pumpkins stacked-triple-top" style="left: 21.4%; width: 64.3%;">Pumpkins</div>
-            <div class="crop-bar planned broccoli stacked-triple-middle" style="left: 21.4%; width: 35.7%;">Broccoli</div>
-            <div class="crop-bar planned chard stacked-triple-bottom" style="left: 21.4%; width: 60.7%;">Chard</div>
-          </div>
+          <template v-for="(bed, index) in calendarData.beds.frontGarden" :key="`front-${index}`">
+            <div class="timeline-label">{{ bed.label }}</div>
+            <div class="timeline-row">
+              <div
+                v-for="n in bed.months"
+                :key="`front-${index}-${n}`"
+                class="timeline-month"
+                :class="{ 'border-right': n % 4 === 0 }"
+              ></div>
+              <div
+                v-for="(bar, barIndex) in bed.bars"
+                :key="`front-bar-${index}-${barIndex}`"
+                class="crop-bar"
+                :class="bar.class"
+                :style="bar.style"
+              >
+                {{ bar.label }}
+              </div>
+            </div>
+          </template>
 
           <!-- Side of House Boxes -->
           <div class="timeline-section-header">🌞 Side of House</div>
 
-          <div class="timeline-label">🌞 Side 1</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`side1-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar potatoes" style="left: 10.7%; width: 46.4%;">🥔 Potatoes</div>
-            <div class="crop-bar planned beetroot" style="left: 57.1%; width: 42.9%;">Beetroot</div>
-          </div>
-
-          <div class="timeline-label">🌞 Side 2</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`side2-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar potatoes" style="left: 10.7%; width: 46.4%;">🥔 Potatoes</div>
-            <div class="crop-bar planned pakchoi" style="left: 57.1%; width: 42.9%;">Pak Choi</div>
-          </div>
-
-          <div class="timeline-label">🌞 Side 3</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`side3-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar potatoes" style="left: 10.7%; width: 46.4%;">🥔 Potatoes</div>
-            <div class="crop-bar planned carrots" style="left: 57%; width: 43%;">Carrots (planned)</div>
-          </div>
-
-          <div class="timeline-label">🌞 Side 4</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`side4-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar potatoes" style="left: 10.7%; width: 46.4%;">🥔 Potatoes</div>
-            <div class="crop-bar planned beans" style="left: 57.1%; width: 42.9%;">Beans</div>
-          </div>
-
-          <div class="timeline-label">🌞 Side 5</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`side5-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar potatoes" style="left: 10.7%; width: 46.4%;">🥔 Potatoes</div>
-            <div class="crop-bar planned beetroot" style="left: 57.1%; width: 42.9%;">Beetroot</div>
-          </div>
-
-          <div class="timeline-label">🌞 Side 6</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`side6-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar potatoes" style="left: 10.7%; width: 46.4%;">🥔 Potatoes</div>
-            <div class="crop-bar planned pakchoi" style="left: 57.1%; width: 42.9%;">Pak Choi</div>
-          </div>
+          <template v-for="(bed, index) in calendarData.beds.sideOfHouse" :key="`side-${index}`">
+            <div class="timeline-label">{{ bed.label }}</div>
+            <div class="timeline-row">
+              <div
+                v-for="n in bed.months"
+                :key="`side-${index}-${n}`"
+                class="timeline-month"
+                :class="{ 'border-right': n % 4 === 0 }"
+              ></div>
+              <div
+                v-for="(bar, barIndex) in bed.bars"
+                :key="`side-bar-${index}-${barIndex}`"
+                class="crop-bar"
+                :class="bar.class"
+                :style="bar.style"
+              >
+                {{ bar.label }}
+              </div>
+            </div>
+          </template>
 
           <!-- Back Garden -->
           <div class="timeline-section-header">🏡 Back Garden</div>
 
-          <div class="timeline-label">🏡 Corner</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`corner-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned beans" style="left: 21.4%; width: 35.7%;">Borlotti Beans</div>
-          </div>
+          <template v-for="(bed, index) in calendarData.beds.backGarden" :key="`back-${index}`">
+            <div class="timeline-label">{{ bed.label }}</div>
+            <div class="timeline-row">
+              <div
+                v-for="n in bed.months"
+                :key="`back-${index}-${n}`"
+                class="timeline-month"
+                :class="{ 'border-right': n % 4 === 0 }"
+              ></div>
+              <div
+                v-for="(bar, barIndex) in bed.bars"
+                :key="`back-bar-${index}-${barIndex}`"
+                class="crop-bar"
+                :class="bar.class"
+                :style="bar.style"
+              >
+                {{ bar.label }}
+              </div>
+            </div>
+          </template>
 
           <!-- Greenhouse -->
           <div class="timeline-section-header">🏗️ Greenhouse</div>
 
-          <div class="timeline-label">🏗️ GH Slot 1</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh1-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned tomatoes" style="left: 21.4%; width: 64.3%;">Tomato</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 2</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh2-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned tomatoes" style="left: 21.4%; width: 64.3%;">Tomato</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 3</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh3-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned tomatoes" style="left: 21.4%; width: 64.3%;">Tomato</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 4</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh4-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned tomatoes" style="left: 21.4%; width: 64.3%;">Tomato</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 5</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh5-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned tomatoes" style="left: 21.4%; width: 64.3%;">Tomato</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 6</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh6-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned tomatoes" style="left: 21.4%; width: 64.3%;">Tomato</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 7</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh7-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned" style="left: 21.4%; width: 64.3%;">Cucumber</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 8</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh8-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned" style="left: 21.4%; width: 64.3%;">Cucumber</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 9</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh9-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned" style="left: 21.4%; width: 64.3%;">Cucumber</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 10</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh10-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned" style="left: 21.4%; width: 64.3%;">Cucumber</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 11</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh11-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned" style="left: 21.4%; width: 64.3%;">Cucumber</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 12</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh12-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned" style="left: 21.4%; width: 64.3%;">Cucumber</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 13</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh13-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned peppers" style="left: 21.4%; width: 64.3%;">Bell Pepper</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 14</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh14-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned peppers" style="left: 21.4%; width: 64.3%;">Bell Pepper</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 15</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh15-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned peppers" style="left: 21.4%; width: 64.3%;">Bell Pepper</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 16</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh16-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned peppers" style="left: 21.4%; width: 64.3%;">Bell Pepper</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 17</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh17-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned peppers" style="left: 21.4%; width: 64.3%;">Bell Pepper</div>
-          </div>
-
-          <div class="timeline-label">🏗️ GH Slot 18</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`gh18-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned peppers" style="left: 21.4%; width: 64.3%;">Bell Pepper</div>
-          </div>
+          <template v-for="(bed, index) in calendarData.beds.greenhouse" :key="`gh-${index}`">
+            <div class="timeline-label">{{ bed.label }}</div>
+            <div class="timeline-row">
+              <div
+                v-for="n in bed.months"
+                :key="`gh-${index}-${n}`"
+                class="timeline-month"
+                :class="{ 'border-right': n % 4 === 0 }"
+              ></div>
+              <div
+                v-for="(bar, barIndex) in bed.bars"
+                :key="`gh-bar-${index}-${barIndex}`"
+                class="crop-bar"
+                :class="bar.class"
+                :style="bar.style"
+              >
+                {{ bar.label }}
+              </div>
+            </div>
+          </template>
 
           <!-- Wild Area -->
           <div class="timeline-section-header">🌿 Wild Area</div>
 
-          <div class="timeline-label">🌿 Wild 1</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`wild1-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar planned beans" style="left: 21.4%; width: 35.7%;">Borlotti Beans</div>
-          </div>
-
-          <div class="timeline-label">🌿 Wild 2</div>
-          <div class="timeline-row">
-            <div v-for="n in 28" :key="`wild2-${n}`" class="timeline-month" :class="{ 'border-right': n % 4 === 0 }"></div>
-            <div class="crop-bar garlic" style="left: 0%; width: 42.9%;">🧄 Garlic</div>
-            <div class="crop-bar planned leeks" style="left: 42.9%; width: 57.1%;">Leeks</div>
-          </div>
+          <template v-for="(bed, index) in calendarData.beds.wildArea" :key="`wild-${index}`">
+            <div class="timeline-label">{{ bed.label }}</div>
+            <div class="timeline-row">
+              <div
+                v-for="n in bed.months"
+                :key="`wild-${index}-${n}`"
+                class="timeline-month"
+                :class="{ 'border-right': n % 4 === 0 }"
+              ></div>
+              <div
+                v-for="(bar, barIndex) in bed.bars"
+                :key="`wild-bar-${index}-${barIndex}`"
+                class="crop-bar"
+                :class="bar.class"
+                :style="bar.style"
+              >
+                {{ bar.label }}
+              </div>
+            </div>
+          </template>
         </div>
       </div>
     </div>
@@ -336,7 +182,7 @@
 </template>
 
 <script setup lang="ts">
-// No interactive elements in this component, all static calendar data
+import calendarData from '../data/calendarData.json'
 </script>
 
 <style scoped>

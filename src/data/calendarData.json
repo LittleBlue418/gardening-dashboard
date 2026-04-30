@@ -1,0 +1,585 @@
+{
+  "unallocatedPlants": [
+    "🫘 Broad Beans",
+    "🥦 Broccoli",
+    "🥬 Kale",
+    "🥬 Spinach",
+    "🧅 Spring Onions"
+  ],
+  "seedlings": [
+    {
+      "label": "🍅 Tomato",
+      "bars": [
+        {
+          "class": "greenhouse tomatoes",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🥒 Cucumber",
+      "bars": [
+        {
+          "class": "greenhouse",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🫑 Bell Pepper",
+      "bars": [
+        {
+          "class": "greenhouse peppers",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🎃 Pumpkin",
+      "bars": [
+        {
+          "class": "started pumpkins",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🥦 Broccoli",
+      "bars": [
+        {
+          "class": "started",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🌈 Chard",
+      "bars": [
+        {
+          "class": "started chard",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🫘 Borlotti Beans",
+      "bars": [
+        {
+          "class": "started beans",
+          "style": "left: 12.5%; width: 14.3%;",
+          "label": "Growing → Transplant"
+        }
+      ]
+    },
+    {
+      "label": "🧅 Leeks",
+      "bars": [
+        {
+          "class": "planned leeks",
+          "style": "left: 14.3%; width: 28.6%;",
+          "label": "Start → Transplant"
+        }
+      ],
+      "months": 28
+    },
+    {
+      "label": "🥬 Kale",
+      "bars": [
+        {
+          "class": "planned kale",
+          "style": "left: 28.6%; width: 14.3%;",
+          "label": "Start → Transplant"
+        }
+      ],
+      "months": 28
+    }
+  ],
+  "beds": {
+    "frontGarden": [
+      {
+        "label": "🌸 Front 1",
+        "months": 28,
+        "bars": [
+          {
+            "class": "onions",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🧅 Onions"
+          },
+          {
+            "class": "planned beetroot",
+            "style": "left: 57.1%; width: 42.9%;",
+            "label": "Beetroot"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 2",
+        "months": 28,
+        "bars": [
+          {
+            "class": "onions",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🧅 Onions"
+          },
+          {
+            "class": "planned peas",
+            "style": "left: 57%; width: 43%;",
+            "label": "Sugar Snap Peas"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 3",
+        "months": 28,
+        "bars": [
+          {
+            "class": "parsnips stacked-top",
+            "style": "left: 12.5%; width: 87.5%;",
+            "label": "🥕 Parsnips"
+          },
+          {
+            "class": "peas stacked-bottom",
+            "style": "left: 12.5%; width: 44.6%;",
+            "label": "🫛 Sugar Snap Peas"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 4",
+        "months": 28,
+        "bars": [
+          {
+            "class": "parsnips stacked-top",
+            "style": "left: 12.5%; width: 87.5%;",
+            "label": "🥕 Parsnips"
+          },
+          {
+            "class": "beetroot stacked-bottom",
+            "style": "left: 12.5%; width: 41.1%;",
+            "label": "🥬 Beetroot"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 5",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned pumpkins stacked-top",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Pumpkins"
+          },
+          {
+            "class": "planned chard stacked-bottom",
+            "style": "left: 21.4%; width: 60.7%;",
+            "label": "Chard"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 6",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned pumpkins stacked-top",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Pumpkins"
+          },
+          {
+            "class": "planned chard stacked-bottom",
+            "style": "left: 21.4%; width: 60.7%;",
+            "label": "Chard"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 7",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned pumpkins stacked-triple-top",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Pumpkins"
+          },
+          {
+            "class": "planned broccoli stacked-triple-middle",
+            "style": "left: 21.4%; width: 35.7%;",
+            "label": "Broccoli"
+          },
+          {
+            "class": "planned chard stacked-triple-bottom",
+            "style": "left: 21.4%; width: 60.7%;",
+            "label": "Chard"
+          }
+        ]
+      },
+      {
+        "label": "🌸 Front 8",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned pumpkins stacked-triple-top",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Pumpkins"
+          },
+          {
+            "class": "planned broccoli stacked-triple-middle",
+            "style": "left: 21.4%; width: 35.7%;",
+            "label": "Broccoli"
+          },
+          {
+            "class": "planned chard stacked-triple-bottom",
+            "style": "left: 21.4%; width: 60.7%;",
+            "label": "Chard"
+          }
+        ]
+      }
+    ],
+    "sideOfHouse": [
+      {
+        "label": "🌞 Side 1",
+        "months": 28,
+        "bars": [
+          {
+            "class": "potatoes",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🥔 Potatoes"
+          },
+          {
+            "class": "planned beetroot",
+            "style": "left: 57.1%; width: 42.9%;",
+            "label": "Beetroot"
+          }
+        ]
+      },
+      {
+        "label": "🌞 Side 2",
+        "months": 28,
+        "bars": [
+          {
+            "class": "potatoes",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🥔 Potatoes"
+          },
+          {
+            "class": "planned pakchoi",
+            "style": "left: 57.1%; width: 42.9%;",
+            "label": "Pak Choi"
+          }
+        ]
+      },
+      {
+        "label": "🌞 Side 3",
+        "months": 28,
+        "bars": [
+          {
+            "class": "potatoes",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🥔 Potatoes"
+          },
+          {
+            "class": "planned carrots",
+            "style": "left: 57%; width: 43%;",
+            "label": "Carrots (planned)"
+          }
+        ]
+      },
+      {
+        "label": "🌞 Side 4",
+        "months": 28,
+        "bars": [
+          {
+            "class": "potatoes",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🥔 Potatoes"
+          },
+          {
+            "class": "planned beans",
+            "style": "left: 57.1%; width: 42.9%;",
+            "label": "Beans"
+          }
+        ]
+      },
+      {
+        "label": "🌞 Side 5",
+        "months": 28,
+        "bars": [
+          {
+            "class": "potatoes",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🥔 Potatoes"
+          },
+          {
+            "class": "planned beetroot",
+            "style": "left: 57.1%; width: 42.9%;",
+            "label": "Beetroot"
+          }
+        ]
+      },
+      {
+        "label": "🌞 Side 6",
+        "months": 28,
+        "bars": [
+          {
+            "class": "potatoes",
+            "style": "left: 10.7%; width: 46.4%;",
+            "label": "🥔 Potatoes"
+          },
+          {
+            "class": "planned pakchoi",
+            "style": "left: 57.1%; width: 42.9%;",
+            "label": "Pak Choi"
+          }
+        ]
+      }
+    ],
+    "backGarden": [
+      {
+        "label": "🏡 Corner",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned beans",
+            "style": "left: 21.4%; width: 35.7%;",
+            "label": "Borlotti Beans"
+          }
+        ]
+      }
+    ],
+    "greenhouse": [
+      {
+        "label": "🏗️ GH Slot 1",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned tomatoes",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Tomato"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 2",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned tomatoes",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Tomato"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 3",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned tomatoes",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Tomato"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 4",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned tomatoes",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Tomato"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 5",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned tomatoes",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Tomato"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 6",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned tomatoes",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Tomato"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 7",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Cucumber"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 8",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Cucumber"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 9",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Cucumber"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 10",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Cucumber"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 11",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Cucumber"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 12",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Cucumber"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 13",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned peppers",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Bell Pepper"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 14",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned peppers",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Bell Pepper"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 15",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned peppers",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Bell Pepper"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 16",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned peppers",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Bell Pepper"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 17",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned peppers",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Bell Pepper"
+          }
+        ]
+      },
+      {
+        "label": "🏗️ GH Slot 18",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned peppers",
+            "style": "left: 21.4%; width: 64.3%;",
+            "label": "Bell Pepper"
+          }
+        ]
+      }
+    ],
+    "wildArea": [
+      {
+        "label": "🌿 Wild 1",
+        "months": 28,
+        "bars": [
+          {
+            "class": "planned beans",
+            "style": "left: 21.4%; width: 35.7%;",
+            "label": "Borlotti Beans"
+          }
+        ]
+      },
+      {
+        "label": "🌿 Wild 2",
+        "months": 28,
+        "bars": [
+          {
+            "class": "garlic",
+            "style": "left: 0%; width: 42.9%;",
+            "label": "🧄 Garlic"
+          },
+          {
+            "class": "planned leeks",
+            "style": "left: 42.9%; width: 57.1%;",
+            "label": "Leeks"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "aprilPlanting": {
+    "directSow": [
+      {
+        "emoji": "🔴",
+        "name": "Radishes",
+        "details": "Quick crop, 25-30 days",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥬",
+        "name": "Spinach",
+        "details": "Cold-tolerant",
+        "haveSeeds": false,
+        "type": "need-seeds"
+      },
+      {
+        "emoji": "🫛",
+        "name": "Peas",
+        "details": "Love cool weather",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥕",
+        "name": "Carrots",
+        "details": "Thin as they grow",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ],
+    "seedlingsToPlant": [
+      {
+        "emoji": "🥔",
+        "name": "Potatoes",
+        "details": "More to plant (location TBD)"
+      }
+    ],
+    "startedIndoors": [
+      {
+        "emoji": "🫑",
+        "name": "Bell Peppers ✓ Started",
+        "details": "Growing indoors → transplant late May to greenhouse",
+        "type": "started"
+      },
+      {
+        "emoji": "🍅",
+        "name": "Tomatoes ✓ Started",
+        "details": "Started: Apr 26 → transplant late May to greenhouse",
+        "type": "started"
+      },
+      {
+        "emoji": "🥒",
+        "name": "Cucumbers ✓ Started",
+        "details": "Started: Apr 26 → transplant late May to greenhouse",
+        "type": "started"
+      },
+      {
+        "emoji": "🎃",
+        "name": "Pumpkins ✓ Started",
+        "details": "Started: Apr 26 → transplant late May to boxes",
+        "type": "started"
+      },
+      {
+        "emoji": "🥦",
+        "name": "Broccoli ✓ Started",
+        "details": "Started: Apr 26 → transplant late May to boxes",
+        "type": "started"
+      },
+      {
+        "emoji": "🌈",
+        "name": "Chard ✓ Started",
+        "details": "Started: Apr 26 → transplant late May to boxes",
+        "type": "started"
+      },
+      {
+        "emoji": "🫘",
+        "name": "Borlotti Beans ✓ Started",
+        "details": "Started: Apr 26 → transplant late May to boxes",
+        "type": "started"
+      }
+    ],
+    "planted": [
+      {
+        "emoji": "🥕",
+        "name": "Parsnips ✓ Planted",
+        "details": "Planted: Apr 26 in Front 3 • Harvest: Oct",
+        "type": "started"
+      },
+      {
+        "emoji": "🫛",
+        "name": "Sugar Snap Peas ✓ Planted",
+        "details": "Planted: Apr 26 in Front 3 • Harvest: Late Jul",
+        "type": "started"
+      },
+      {
+        "emoji": "🥕",
+        "name": "Parsnips ✓ Planted",
+        "details": "Planted: Apr 26 in Front 4 • Harvest: Oct",
+        "type": "started"
+      },
+      {
+        "emoji": "🥬",
+        "name": "Beetroot ✓ Planted",
+        "details": "Planted: Apr 26 in Front 4 • Harvest: Late Jul",
+        "type": "started"
+      }
+    ]
+  },
+  "mayPlanting": {
+    "transplantOutdoors": [
+      {
+        "emoji": "🍅",
+        "name": "Tomatoes",
+        "details": "From indoor seedlings → greenhouse",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥒",
+        "name": "Cucumbers",
+        "details": "From indoor seedlings → greenhouse",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🎃",
+        "name": "Pumpkins",
+        "details": "From indoor seedlings → boxes",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥦",
+        "name": "Broccoli",
+        "details": "From indoor seedlings → boxes",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🫑",
+        "name": "Bell Peppers",
+        "details": "From seedlings → greenhouse",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ],
+    "directSow": [
+      {
+        "emoji": "🫘",
+        "name": "Broad Beans",
+        "details": "Sow directly outside",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥬",
+        "name": "Beetroot",
+        "details": "Succession sowing",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥕",
+        "name": "Carrots",
+        "details": "Succession sowing",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🔴",
+        "name": "Radishes",
+        "details": "Succession sowing",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🧅",
+        "name": "Spring Onions",
+        "details": "Quick growing",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🫘",
+        "name": "Borlotti Beans",
+        "details": "Sow after last frost, warm weather crop",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ],
+    "startIndoors": [
+      {
+        "emoji": "🧅",
+        "name": "Leeks",
+        "details": "Start indoors → transplant Jul-Aug",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ]
+  },
+  "junePlanting": {
+    "startIndoors": [
+      {
+        "emoji": "🥬",
+        "name": "Kale",
+        "details": "Start indoors → transplant Jul for fall harvest",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🧅",
+        "name": "Leeks",
+        "details": "Start indoors → transplant Jul-Aug",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ],
+    "directSow": [
+      {
+        "emoji": "🥕",
+        "name": "Carrots",
+        "details": "Succession sowing for fall harvest",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥬",
+        "name": "Beetroot",
+        "details": "Succession sowing",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🔴",
+        "name": "Radishes",
+        "details": "Quick succession crop",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🫛",
+        "name": "Peas",
+        "details": "Second sowing for late summer",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🥬",
+        "name": "Pak Choi",
+        "details": "Fast growing, cool season crop",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ]
+  },
+  "harvestingPlan": {
+    "June 2026": [
+      {
+        "emoji": "🧄",
+        "name": "Garlic",
+        "details": "Late June"
+      }
+    ],
+    "July 2026": [
+      {
+        "emoji": "🥔",
+        "name": "Potatoes",
+        "details": "Late July (6 boxes)"
+      }
+    ],
+    "August 2026": [
+      {
+        "emoji": "🧅",
+        "name": "Onions",
+        "details": "Early August (2 boxes)"
+      }
+    ]
+  },
+  "shoppingList": [
+    {
+      "emoji": "🥬",
+      "name": "Spinach seeds"
+    }
+  ],
+  "seedInventory": [
+    { "name": "🥬 Beetroot", "quantity": "×6" },
+    { "name": "🥦 Broccoli", "quantity": "×3" },
+    { "name": "🫑 Bell Peppers", "quantity": "×5" },
+    { "name": "🫘 Broad Beans", "quantity": "×1" },
+    { "name": "🫘 Borlotti Beans", "quantity": "×3" },
+    { "name": "🌿 Rainbow Chard", "quantity": "×1" },
+    { "name": "Carrots", "quantity": "×6" },
+    { "name": "🌶️ Chilli Pepper", "quantity": "×2" },
+    { "name": "🥒 Cucumbers", "quantity": "×1" },
+    { "name": "🥬 Kale", "quantity": "×1" },
+    { "name": "🧅 Leeks", "quantity": "×4" },
+    { "name": "🧅 Spring Onions", "quantity": "×1" },
+    { "name": "🫛 Sugar Snap Peas", "quantity": "×4" },
+    { "name": "🫛 Peas", "quantity": "×2" },
+    { "name": "🥬 Pak Choi", "quantity": "×2" },
+    { "name": "🥕 Parsnips", "quantity": "×1" },
+    { "name": "Pumpkins", "quantity": "×5" },
+    { "name": "Radishes", "quantity": "×2" },
+    { "name": "🍅 Tomatoes", "quantity": "×8" },
+    { "name": "🎃 Squash", "quantity": "×1" }
+  ]
+}

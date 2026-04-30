@@ -7,14 +7,17 @@
         Upcoming
       </div>
 
-      <div class="upcoming-date-section">Monday, Apr 27</div>
-      <div class="upcoming-item future">Ultrasound appointment</div>
-
-      <div class="upcoming-date-section">Wednesday, Apr 29</div>
-      <div class="upcoming-item future">Knitting evening with Jo</div>
-
-      <div class="upcoming-date-section">Saturday, May 2</div>
-      <div class="upcoming-item future">Aisling's wedding</div>
+      <template v-for="(dateSection, index) in homeData.upcomingEvents" :key="index">
+        <div class="upcoming-date-section">{{ dateSection.date }}</div>
+        <div
+          v-for="(event, eventIndex) in dateSection.events"
+          :key="`${index}-${eventIndex}`"
+          class="upcoming-item"
+          :class="event.type"
+        >
+          {{ event.title }}
+        </div>
+      </template>
     </div>
 
     <!-- Column 2: Prioritised Tasks -->
@@ -25,34 +28,32 @@
       </div>
 
       <div class="section-title">Priority 1</div>
-      <div class="priority-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.priority0" @change="saveCheckbox('priority-0')">
-          Assemble wedding skirt
-        </label>
-      </div>
-
-      <div class="priority-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.priority1" @change="saveCheckbox('priority-1')">
-          New mockup for wedding corset
-        </label>
-      </div>
-
-      <div class="priority-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.priority2" @change="saveCheckbox('priority-2')">
-          Make pattern for wedding waistcoat
-        </label>
-      </div>
+      <template v-for="task in priority1Tasks" :key="task.id">
+        <div class="priority-item">
+          <label>
+            <input
+              type="checkbox"
+              v-model="checkboxes[task.id]"
+              @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
+            >
+            {{ task.title }}
+          </label>
+        </div>
+      </template>
 
       <div class="section-title">Priority 2</div>
-      <div class="priority-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.priority3" @change="saveCheckbox('priority-3')">
-          Book dentist appointment
-        </label>
-      </div>
+      <template v-for="task in priority2Tasks" :key="task.id">
+        <div class="priority-item">
+          <label>
+            <input
+              type="checkbox"
+              v-model="checkboxes[task.id]"
+              @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
+            >
+            {{ task.title }}
+          </label>
+        </div>
+      </template>
     </div>
 
     <!-- Column 3: General To-Do -->
@@ -62,66 +63,18 @@
         General To-Do
       </div>
 
-      <div class="todo-item">
+      <div
+        v-for="task in homeData.generalTodo"
+        :key="task.id"
+        class="todo-item"
+      >
         <label>
-          <input type="checkbox" v-model="checkboxes.personal0" @change="saveCheckbox('personal-0')">
-          Move the firewood
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal1" @change="saveCheckbox('personal-1')">
-          Recycle scraps from deck building
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal2" @change="saveCheckbox('personal-2')">
-          Organize bookcase
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal3" @change="saveCheckbox('personal-3')">
-          Empty sauna
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal4" @change="saveCheckbox('personal-4')">
-          Unblock wood chipper
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal5" @change="saveCheckbox('personal-5')">
-          Mount small greenhouse
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal6" @change="saveCheckbox('personal-6')">
-          Take down Christmas decorations in office
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal7" @change="saveCheckbox('personal-7')">
-          Unpack the office boxes
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.personal8" @change="saveCheckbox('personal-8')">
-          Dye hair
+          <input
+            type="checkbox"
+            v-model="checkboxes[task.id]"
+            @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
+          >
+          {{ task.title }}
         </label>
       </div>
     </div>
@@ -133,59 +86,18 @@
         Garden To-Do
       </div>
 
-      <div class="todo-item">
+      <div
+        v-for="task in homeData.gardenTodo"
+        :key="task.id"
+        class="todo-item"
+      >
         <label>
-          <input type="checkbox" v-model="checkboxes.garden0" @change="saveCheckbox('garden-0')">
-          Start tomato seeds indoors
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden1" @change="saveCheckbox('garden-1')">
-          Start cucumber seeds indoors
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden2" @change="saveCheckbox('garden-2')">
-          Start pumpkin seeds indoors
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden3" @change="saveCheckbox('garden-3')">
-          Start broccoli & cauliflower indoors
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden4" @change="saveCheckbox('garden-4')">
-          Direct sow: radishes, spinach, peas
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden5" @change="saveCheckbox('garden-5')">
-          Direct sow: carrots, chard
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden6" @change="saveCheckbox('garden-6')">
-          Plant onion sets (~2 boxes)
-        </label>
-      </div>
-
-      <div class="todo-item">
-        <label>
-          <input type="checkbox" v-model="checkboxes.garden7" @change="saveCheckbox('garden-7')">
-          Finish planting remaining potatoes
+          <input
+            type="checkbox"
+            v-model="checkboxes[task.id]"
+            @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
+          >
+          {{ task.title }}
         </label>
       </div>
     </div>
@@ -193,9 +105,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import homeData from '../data/homeData.json'
 
 interface Checkboxes {
+  [key: string]: boolean
   priority0: boolean
   priority1: boolean
   priority2: boolean
@@ -243,6 +157,14 @@ const checkboxes = ref<Checkboxes>({
   garden7: false,
 })
 
+const priority1Tasks = computed(() =>
+  homeData.prioritisedTasks.filter(task => !task.isPriority2)
+)
+
+const priority2Tasks = computed(() =>
+  homeData.prioritisedTasks.filter(task => task.isPriority2)
+)
+
 const saveCheckbox = (id: string) => {
   const key = id.replace('-', '')
   const value = checkboxes.value[key as keyof Checkboxes]
@@ -250,7 +172,7 @@ const saveCheckbox = (id: string) => {
 }
 
 const loadCheckboxes = () => {
-  const keys = Object.keys(checkboxes.value) as Array<keyof Checkboxes>
+  const keys = Object.keys(checkboxes.value) as string[]
   keys.forEach((key) => {
     const id = key.replace(/(\d+)$/, '-$1')
     const saved = localStorage.getItem(`checkbox-${id}`)
