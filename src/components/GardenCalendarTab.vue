@@ -462,4 +462,13 @@ import calendarData from '../data/calendarData.json'
   font-size: 9px;
   top: 28px;
 }
+
+.crop-bar.cold-frame {
+  background: linear-gradient(135deg, rgba(147, 197, 253, 0.3) 0%, rgba(96, 165, 250, 0.5) 100%);
+  border: 2px dashed #3b82f6;
+  color: #1e40af;
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+}
 </style>

@@ -171,14 +171,19 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned pumpkins stacked-top",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Pumpkins"
+            "class": "beans stacked-top",
+            "style": "left: 12.5%; width: 35.7%;",
+            "label": "🫘 Borlotti Beans"
           },
           {
-            "class": "planned chard stacked-bottom",
-            "style": "left: 21.4%; width: 60.7%;",
-            "label": "Chard"
+            "class": "planned stacked-bottom",
+            "style": "left: 12.5%; width: 21.4%;",
+            "label": "🥬 Bok Choi"
+          },
+          {
+            "class": "cold-frame",
+            "style": "left: 12.5%; width: 14.3%; top: -25px; height: 15px; opacity: 0.7;",
+            "label": "🏠 Cold Frame"
           }
         ]
       },

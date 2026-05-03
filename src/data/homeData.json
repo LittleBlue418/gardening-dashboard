@@ -1,24 +1,5 @@
 {
-  "upcomingEvents": [
-    {
-      "date": "Monday, Apr 27",
-      "events": [
-        { "title": "Ultrasound appointment", "type": "future" }
-      ]
-    },
-    {
-      "date": "Wednesday, Apr 29",
-      "events": [
-        { "title": "Knitting evening with Jo", "type": "future" }
-      ]
-    },
-    {
-      "date": "Saturday, May 2",
-      "events": [
-        { "title": "Aisling's wedding", "type": "future" }
-      ]
-    }
-  ],
+  "upcomingEvents": [],
   "prioritisedTasks": [
     {
       "id": "priority0",

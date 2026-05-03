@@ -1,10 +1,10 @@
 {
-  "weeksUntilLastFrost": "~5 weeks",
+  "weeksUntilLastFrost": "~2 weeks",
   "lastFrostDate": "Mid-May",
   "lastFrostEmoji": "❄️",
   "firstFrostDate": "Late Sept",
   "firstFrostEmoji": "🍂",
   "growingDays": "140-150",
-  "timelineMarkerPosition": "10%",
-  "weatherNote": "⚠️ Last frost expected mid/late May - start hardy crops now, wait for heat-lovers!"
+  "timelineMarkerPosition": "17%",
+  "weatherNote": "⚠️ Last frost expected mid-May - transplant seedlings soon!"
 }
