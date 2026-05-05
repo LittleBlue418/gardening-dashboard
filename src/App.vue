@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import HomeTab from './components/HomeTab.vue'
-import GardenTab from './components/GardenTab.vue'
-import GardenCalendarTab from './components/GardenCalendarTab.vue'
-import GardenPlanTab from './components/GardenPlanTab.vue'
+import HomeTab from './tabs/HomeTab.vue'
+import GardenTab from './tabs/GardenTab.vue'
+import GardenCalendarTab from './tabs/GardenCalendarTab.vue'
+import GardenPlanTab from './tabs/GardenPlanTab.vue'
 import quickStatsData from './data/quickStats.json'
 
 const activeTab = ref<'home' | 'garden' | 'calendar' | 'plan'>('home')

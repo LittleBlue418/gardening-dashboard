@@ -1,12 +1,7 @@
 <template>
   <div class="home-tab">
     <!-- Column 1: Garden To-Do -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">🌿</span>
-        Garden To-Do
-      </div>
-
+    <Section emoji="🌿" title="Garden To-Do">
       <div
         v-for="task in homeData.gardenTodo"
         :key="task.id"
@@ -21,15 +16,10 @@
           {{ task.title }}
         </label>
       </div>
-    </div>
+    </Section>
 
     <!-- Column 2: Upcoming -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">📆</span>
-        Upcoming
-      </div>
-
+    <Section emoji="📆" title="Upcoming">
       <div v-if="homeData.upcomingEvents.length === 0" class="upcoming-item">
         No upcoming events
       </div>
@@ -44,15 +34,10 @@
           {{ event.title }}
         </div>
       </template>
-    </div>
+    </Section>
 
     <!-- Column 3: Prioritised Tasks -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">⭐</span>
-        Prioritised Tasks
-      </div>
-
+    <Section emoji="⭐" title="Prioritised Tasks">
       <div class="section-title">Priority 1</div>
       <template v-for="task in priority1Tasks" :key="task.id">
         <div class="priority-item">
@@ -80,15 +65,10 @@
           </label>
         </div>
       </template>
-    </div>
+    </Section>
 
     <!-- Column 4: General To-Do -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">📝</span>
-        General To-Do
-      </div>
-
+    <Section emoji="📝" title="General To-Do">
       <div
         v-for="task in homeData.generalTodo"
         :key="task.id"
@@ -103,13 +83,14 @@
           {{ task.title }}
         </label>
       </div>
-    </div>
+    </Section>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import homeDataRaw from '../data/homeData.json'
+import Section from '../components/Section.vue'
 
 interface UpcomingEvent {
   title: string
@@ -222,29 +203,6 @@ onMounted(() => {
 <style scoped>
 .home-tab {
   display: contents;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 14px;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
-}
-
-.card-header {
-  font-size: 17px;
-  font-weight: bold;
-  color: #1e40af;
-  margin-bottom: 10px;
-  padding-bottom: 7px;
-  border-bottom: 2px solid #dbeafe;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.card-icon {
-  font-size: 20px;
 }
 
 .section-title {

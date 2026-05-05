@@ -1,12 +1,7 @@
 <template>
   <div class="garden-tab">
     <!-- Column 2: February Planting Plan -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">❄️</span>
-        February Planting Plan
-      </div>
-
+    <Section emoji="❄️" title="February Planting Plan">
       <div class="section-title">🏠 Start Indoors</div>
       <div
         v-for="(plant, index) in gardenData.februaryPlanting.startIndoors"
@@ -40,15 +35,10 @@
           <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
-    </div>
+    </Section>
 
     <!-- Column 3: March Planting Plan -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">🌱</span>
-        March Planting Plan
-      </div>
-
+    <Section emoji="🌱" title="March Planting Plan">
       <div class="section-title">🏠 Start Indoors</div>
       <div
         v-for="(plant, index) in gardenData.marchPlanting.startIndoors"
@@ -65,15 +55,10 @@
           <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
-    </div>
+    </Section>
 
     <!-- Column 4: April Planting Plan -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">📅</span>
-        April Planting Plan
-      </div>
-
+    <Section emoji="📅" title="April Planting Plan">
       <div class="section-title">🌱 Direct Sow</div>
       <div
         v-for="(plant, index) in gardenData.aprilPlanting.directSow"
@@ -128,15 +113,10 @@
           <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
-    </div>
+    </Section>
 
     <!-- Column 5: May Planting Plan -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">🌺</span>
-        May Planting Plan
-      </div>
-
+    <Section emoji="🌺" title="May Planting Plan">
       <div class="section-title">🌱 Transplant Outdoors (after last frost ~May 20)</div>
       <div
         v-for="(plant, index) in gardenData.mayPlanting.transplantOutdoors"
@@ -187,15 +167,10 @@
           <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
-    </div>
+    </Section>
 
     <!-- Column 6: June Planting Plan -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">☀️</span>
-        June Planting Plan
-      </div>
-
+    <Section emoji="☀️" title="June Planting Plan">
       <div class="section-title">🏠 Start Indoors (for fall harvest)</div>
       <div
         v-for="(plant, index) in gardenData.junePlanting.startIndoors"
@@ -229,15 +204,10 @@
           <div class="plant-details">{{ plant.details }}</div>
         </div>
       </div>
-    </div>
+    </Section>
 
     <!-- Column 7: Harvesting Plan -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">🗓️</span>
-        Harvesting Plan
-      </div>
-
+    <Section emoji="🗓️" title="Harvesting Plan">
       <template v-for="(plants, month) in gardenData.harvestingPlan" :key="month">
         <div class="section-title">{{ month }}</div>
         <div
@@ -252,15 +222,10 @@
           </div>
         </div>
       </template>
-    </div>
+    </Section>
 
     <!-- Column 8: Gardening Shopping -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">🛒</span>
-        Gardening Shopping
-      </div>
-
+    <Section emoji="🛒" title="Gardening Shopping">
       <div
         v-for="(item, index) in gardenData.shoppingList"
         :key="`shopping-${index}`"
@@ -269,16 +234,12 @@
         <span class="plant-emoji">{{ item.emoji }}</span>
         <div class="shopping-item-text">{{ item.name }}</div>
       </div>
-    </div>
+    </Section>
 
     <!-- Seed Inventory (Full Width) -->
-    <div class="card full-width">
-      <div class="card-header">
-        <span class="card-icon">📦</span>
-        Seed Inventory
-      </div>
-
-      <div class="seed-grid">
+    <div class="full-width">
+      <Section emoji="📦" title="Seed Inventory">
+        <div class="seed-grid">
         <div
           v-for="(seed, index) in gardenData.seedInventory"
           :key="`seed-${index}`"
@@ -288,40 +249,19 @@
           <span class="seed-quantity">{{ seed.quantity }}</span>
         </div>
       </div>
+      </Section>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import gardenData from '../data/gardenData.json'
+import Section from '../components/Section.vue'
 </script>
 
 <style scoped>
 .garden-tab {
   display: contents;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  padding: 14px;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
-}
-
-.card-header {
-  font-size: 17px;
-  font-weight: bold;
-  color: #1e40af;
-  margin-bottom: 10px;
-  padding-bottom: 7px;
-  border-bottom: 2px solid #dbeafe;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.card-icon {
-  font-size: 20px;
 }
 
 .section-title {
