@@ -31,13 +31,10 @@
     { "id": "personal8", "title": "Dye hair" }
   ],
   "gardenTodo": [
-    { "id": "garden0", "title": "Start tomato seeds indoors" },
-    { "id": "garden1", "title": "Start cucumber seeds indoors" },
-    { "id": "garden2", "title": "Start pumpkin seeds indoors" },
-    { "id": "garden3", "title": "Start broccoli & cauliflower indoors" },
-    { "id": "garden4", "title": "Direct sow: radishes, spinach, peas" },
-    { "id": "garden5", "title": "Direct sow: carrots, chard" },
-    { "id": "garden6", "title": "Plant onion sets (~2 boxes)" },
-    { "id": "garden7", "title": "Finish planting remaining potatoes" }
+    { "id": "garden0", "title": "Find place for remaining onion sets" },
+    { "id": "garden1", "title": "Find place for remaining potatoes" },
+    { "id": "garden2", "title": "Direct sow leeks" },
+    { "id": "garden3", "title": "Staple gun supports for honeysuckle" },
+    { "id": "garden4", "title": "Turn compost" }
   ]
 }

@@ -1,0 +1,244 @@
+{
+  "months": [
+    {
+      "name": "January",
+      "emoji": "❄️",
+      "weeks": [
+        {
+          "label": "",
+          "tasks": ["Order seeds for the coming year", "🌱 START INDOORS: Chilli peppers"]
+        }
+      ]
+    },
+    {
+      "name": "February",
+      "emoji": "❄️",
+      "weeks": [
+        {
+          "label": "",
+          "tasks": ["🌱 START INDOORS: Leek", "🌱 START INDOORS: Bell peppers", "🌿 DIRECT SOW: Early spinach", "🌿 DIRECT SOW: Radish"]
+        }
+      ]
+    },
+    {
+      "name": "March",
+      "emoji": "🌱",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["Order potatoes for chitting", "Clean greenhouse", "Add shredded mulch cardboard to beds"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["Chit potatoes indoors", "Add shredded mulch cardboard to beds"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["🌱 START INDOORS: Bell peppers", "🌱 START INDOORS: Chilli peppers", "🌱 START INDOORS: Leeks", "🌱 START INDOORS: Tomatoes"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["Monitor seedlings", "Water pepper seedlings"]
+        }
+      ]
+    },
+    {
+      "name": "April",
+      "emoji": "🌸",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["🌱 START INDOORS: Broccoli", "🌿 DIRECT SOW: Peas", "🌿 DIRECT SOW: Broad beans", "🌿 DIRECT SOW: Spinach"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["🌱 START INDOORS: Cucumbers", "🌱 START INDOORS: Pumpkins", "🌿 DIRECT SOW: Radishes", "🌿 DIRECT SOW: Carrots", "🌿 DIRECT SOW: Parsnips"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["🌱 START INDOORS: Chard", "🌱 START INDOORS: Borlotti beans", "🌿 DIRECT SOW: Pak Choi", "🌿 DIRECT SOW: Beetroot (1st succession)", "🌿 DIRECT SOW: Onion sets"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["🌿 DIRECT SOW: Potatoes (1st early)", "Monitor all seedlings", "Harden off check", "Dig up first dandelions", "Put out moth hormone trap"]
+        }
+      ]
+    },
+    {
+      "name": "May",
+      "emoji": "🌺",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["🌿 DIRECT SOW: Potatoes (maincrop)", "🌿 DIRECT SOW: Carrots (succession)", "Continue hardening off seedlings"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["Harden off tomatoes & peppers", "Weed beds", "Water seedlings"]
+        },
+        {
+          "label": "Week 3 (After last frost ~May 20)",
+          "tasks": ["🌱→🌿 TRANSPLANT: Tomatoes to greenhouse", "🌱→🌿 TRANSPLANT: Cucumbers to greenhouse", "🌱→🌿 TRANSPLANT: Bell peppers to greenhouse", "🌱→🌿 TRANSPLANT: Pumpkins to beds"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["🌱→🌿 TRANSPLANT: Broccoli to beds", "🌱→🌿 TRANSPLANT: Chard to beds", "🌱→🌿 TRANSPLANT: Borlotti beans", "Water all transplants daily"]
+        }
+      ]
+    },
+    {
+      "name": "June",
+      "emoji": "☀️",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["🌱 START INDOORS: Kale (for fall)", "🌿 DIRECT SOW: Radishes (succession)", "Mulch beds", "Water regularly"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["🌿 DIRECT SOW: Beetroot (succession)", "🌿 DIRECT SOW: Carrots (succession)", "Monitor for pests", "Weed"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["🌿 DIRECT SOW: Pak Choi (succession)", "Side-dress tomatoes", "Pinch out tomato suckers"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["✂️ HARVEST: Garlic (late June)", "✂️ HARVEST: Radishes (1st sowing)", "Feed greenhouse plants"]
+        }
+      ]
+    },
+    {
+      "name": "July",
+      "emoji": "☀️",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["✂️ HARVEST: Peas", "✂️ HARVEST: Broad beans", "Water daily in heat"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["✂️ HARVEST: Sugar snap peas", "✂️ HARVEST: Beetroot (1st sowing)", "Continue watering"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["✂️ HARVEST: Early potatoes", "✂️ HARVEST: Chard (begin)", "Feed tomatoes & peppers"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["✂️ HARVEST: Tomatoes (begin)", "✂️ HARVEST: Cucumbers (begin)", "Water & feed regularly"]
+        }
+      ]
+    },
+    {
+      "name": "August",
+      "emoji": "🌻",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["✂️ HARVEST: Onions (early)", "✂️ HARVEST: Tomatoes (ongoing)", "✂️ HARVEST: Cucumbers (ongoing)"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["✂️ HARVEST: Broccoli", "✂️ HARVEST: Peppers (begin)", "Cure onions in sun"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["✂️ HARVEST: Borlotti beans (pods dry)", "Continue tomato harvest", "Water regularly"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["✂️ HARVEST: Carrots (succession sowings)", "Plan autumn planting", "Weed & tidy"]
+        }
+      ]
+    },
+    {
+      "name": "September",
+      "emoji": "🍂",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["✂️ HARVEST: Pumpkins (early)", "✂️ HARVEST: Tomatoes (continue)", "Reduce watering"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["✂️ HARVEST: Squash", "✂️ HARVEST: Main potatoes", "Store harvests properly"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["✂️ HARVEST: Pumpkins (cure)", "Monitor for first frost", "Protect tender plants"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["✂️ HARVEST: Leeks (begin)", "✂️ HARVEST: Kale", "Clear spent plants"]
+        }
+      ]
+    },
+    {
+      "name": "October",
+      "emoji": "🍂",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["✂️ HARVEST: Parsnips (sweeter after frost)", "✂️ HARVEST: Final tomatoes", "Clean greenhouse"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["🌿 PLANT: Garlic cloves (for next year!)", "✂️ HARVEST: Leeks (ongoing)", "Mulch beds heavily"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["✂️ HARVEST: Carrots (store)", "Clear annual beds", "Add compost to empty beds"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["✂️ HARVEST: Beetroot (final)", "Protect winter crops", "Turn compost"]
+        }
+      ]
+    },
+    {
+      "name": "November",
+      "emoji": "🌧️",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["✂️ HARVEST: Parsnips (ongoing)", "✂️ HARVEST: Kale (ongoing)", "Insulate greenhouse"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["Collect fallen leaves for compost", "Clean & oil tools", "Drain outdoor taps"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["Empty pots & store", "Review year's successes", "Note what worked"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["Plan next year's layout", "Order early seed catalogs", "Rest!"]
+        }
+      ]
+    },
+    {
+      "name": "December",
+      "emoji": "❄️",
+      "weeks": [
+        {
+          "label": "Week 1",
+          "tasks": ["✂️ HARVEST: Leeks (continue)", "Check stored vegetables", "Make pickles & preserves"]
+        },
+        {
+          "label": "Week 2",
+          "tasks": ["Review garden journal", "Celebrate the year!", "Dream about spring"]
+        },
+        {
+          "label": "Week 3",
+          "tasks": ["Check garlic bed mulch", "Turn compost if not frozen", "Rest & plan"]
+        },
+        {
+          "label": "Week 4",
+          "tasks": ["Enjoy stored harvest", "Start seed wish list", "Happy holidays!"]
+        }
+      ]
+    }
+  ]
+}

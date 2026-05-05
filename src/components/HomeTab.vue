@@ -1,13 +1,39 @@
 <template>
   <div class="home-tab">
-    <!-- Column 1: Upcoming -->
+    <!-- Column 1: Garden To-Do -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🌿</span>
+        Garden To-Do
+      </div>
+
+      <div
+        v-for="task in homeData.gardenTodo"
+        :key="task.id"
+        class="todo-item"
+      >
+        <label>
+          <input
+            type="checkbox"
+            v-model="checkboxes[task.id]"
+            @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
+          >
+          {{ task.title }}
+        </label>
+      </div>
+    </div>
+
+    <!-- Column 2: Upcoming -->
     <div class="card">
       <div class="card-header">
         <span class="card-icon">📆</span>
         Upcoming
       </div>
 
-      <template v-for="(dateSection, index) in homeData.upcomingEvents" :key="index">
+      <div v-if="homeData.upcomingEvents.length === 0" class="upcoming-item">
+        No upcoming events
+      </div>
+      <template v-else v-for="(dateSection, index) in homeData.upcomingEvents" :key="index">
         <div class="upcoming-date-section">{{ dateSection.date }}</div>
         <div
           v-for="(event, eventIndex) in dateSection.events"
@@ -20,7 +46,7 @@
       </template>
     </div>
 
-    <!-- Column 2: Prioritised Tasks -->
+    <!-- Column 3: Prioritised Tasks -->
     <div class="card">
       <div class="card-header">
         <span class="card-icon">⭐</span>
@@ -56,7 +82,7 @@
       </template>
     </div>
 
-    <!-- Column 3: General To-Do -->
+    <!-- Column 4: General To-Do -->
     <div class="card">
       <div class="card-header">
         <span class="card-icon">📝</span>
@@ -78,35 +104,41 @@
         </label>
       </div>
     </div>
-
-    <!-- Column 9: Garden To-Do -->
-    <div class="card">
-      <div class="card-header">
-        <span class="card-icon">🌿</span>
-        Garden To-Do
-      </div>
-
-      <div
-        v-for="task in homeData.gardenTodo"
-        :key="task.id"
-        class="todo-item"
-      >
-        <label>
-          <input
-            type="checkbox"
-            v-model="checkboxes[task.id]"
-            @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
-          >
-          {{ task.title }}
-        </label>
-      </div>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import homeData from '../data/homeData.json'
+import homeDataRaw from '../data/homeData.json'
+
+interface UpcomingEvent {
+  title: string
+  type: string
+}
+
+interface DateSection {
+  date: string
+  events: UpcomingEvent[]
+}
+
+interface HomeData {
+  upcomingEvents: DateSection[]
+  prioritisedTasks: Array<{
+    id: string
+    title: string
+    isPriority2?: boolean
+  }>
+  generalTodo: Array<{
+    id: string
+    title: string
+  }>
+  gardenTodo: Array<{
+    id: string
+    title: string
+  }>
+}
+
+const homeData = homeDataRaw as HomeData
 
 interface Checkboxes {
   [key: string]: boolean

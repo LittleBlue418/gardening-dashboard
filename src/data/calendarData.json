@@ -31,9 +31,9 @@
       "label": "🫑 Bell Pepper",
       "bars": [
         {
-          "class": "greenhouse peppers",
+          "class": "completed peppers",
           "style": "left: 12.5%; width: 14.3%;",
-          "label": "Growing → Transplant"
+          "label": "✓ Transplanted"
         }
       ]
     },
@@ -182,7 +182,7 @@
           },
           {
             "class": "cold-frame",
-            "style": "left: 12.5%; width: 14.3%; top: -25px; height: 15px; opacity: 0.7;",
+            "style": "left: 12.5%; width: 14.3%; top: -5px; height: 15px; opacity: 0.7;",
             "label": "🏠 Cold Frame"
           }
         ]
@@ -495,9 +495,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned peppers",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Bell Pepper"
+            "class": "peppers",
+            "style": "left: 17.9%; width: 67.9%;",
+            "label": "🫑 Bell Pepper"
           }
         ]
       },
@@ -506,9 +506,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned peppers",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Bell Pepper"
+            "class": "peppers",
+            "style": "left: 17.9%; width: 67.9%;",
+            "label": "🫑 Bell Pepper"
           }
         ]
       },
@@ -517,9 +517,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned peppers",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Bell Pepper"
+            "class": "peppers",
+            "style": "left: 17.9%; width: 67.9%;",
+            "label": "🫑 Bell Pepper"
           }
         ]
       },
@@ -528,9 +528,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned peppers",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Bell Pepper"
+            "class": "peppers",
+            "style": "left: 17.9%; width: 67.9%;",
+            "label": "🫑 Bell Pepper"
           }
         ]
       },
@@ -539,9 +539,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned peppers",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Bell Pepper"
+            "class": "peppers",
+            "style": "left: 17.9%; width: 67.9%;",
+            "label": "🫑 Bell Pepper"
           }
         ]
       },
@@ -550,9 +550,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned peppers",
-            "style": "left: 21.4%; width: 64.3%;",
-            "label": "Bell Pepper"
+            "class": "peppers",
+            "style": "left: 17.9%; width: 67.9%;",
+            "label": "🫑 Bell Pepper"
           }
         ]
       }
@@ -563,9 +563,9 @@
         "months": 28,
         "bars": [
           {
-            "class": "planned beans",
-            "style": "left: 21.4%; width: 35.7%;",
-            "label": "Borlotti Beans"
+            "class": "leeks",
+            "style": "left: 17.9%; width: 60.7%;",
+            "label": "🧅 Leeks"
           }
         ]
       },
@@ -574,14 +574,14 @@
         "months": 28,
         "bars": [
           {
-            "class": "garlic",
+            "class": "garlic stacked-top",
             "style": "left: 0%; width: 42.9%;",
             "label": "🧄 Garlic"
           },
           {
-            "class": "planned leeks",
-            "style": "left: 42.9%; width: 57.1%;",
-            "label": "Leeks"
+            "class": "potatoes stacked-bottom",
+            "style": "left: 17.9%; width: 39.3%;",
+            "label": "🥔 Potatoes"
           }
         ]
       }

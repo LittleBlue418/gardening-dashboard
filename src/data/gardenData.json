@@ -1,4 +1,56 @@
 {
+  "februaryPlanting": {
+    "startIndoors": [
+      {
+        "emoji": "🧅",
+        "name": "Leeks",
+        "details": "Start indoors → transplant Jul-Aug",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🫑",
+        "name": "Bell Peppers",
+        "details": "Start indoors → transplant late May to greenhouse",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ],
+    "directSow": [
+      {
+        "emoji": "🥬",
+        "name": "Early Spinach",
+        "details": "Cold-hardy variety",
+        "haveSeeds": false,
+        "type": "need-seeds"
+      },
+      {
+        "emoji": "🔴",
+        "name": "Radish",
+        "details": "Early cold-hardy variety",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ]
+  },
+  "marchPlanting": {
+    "startIndoors": [
+      {
+        "emoji": "🍅",
+        "name": "Tomatoes",
+        "details": "Start indoors → transplant late May to greenhouse",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      },
+      {
+        "emoji": "🧅",
+        "name": "Leeks",
+        "details": "Start indoors → transplant Jul-Aug",
+        "haveSeeds": true,
+        "type": "have-seeds"
+      }
+    ]
+  },
   "aprilPlanting": {
     "directSow": [
       {

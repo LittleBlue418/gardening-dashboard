@@ -3,17 +3,18 @@ import { ref, onMounted } from 'vue'
 import HomeTab from './components/HomeTab.vue'
 import GardenTab from './components/GardenTab.vue'
 import GardenCalendarTab from './components/GardenCalendarTab.vue'
+import GardenPlanTab from './components/GardenPlanTab.vue'
 import quickStatsData from './data/quickStats.json'
 
-const activeTab = ref<'home' | 'garden' | 'calendar'>('home')
+const activeTab = ref<'home' | 'garden' | 'calendar' | 'plan'>('home')
 
-const switchTab = (tabName: 'home' | 'garden' | 'calendar') => {
+const switchTab = (tabName: 'home' | 'garden' | 'calendar' | 'plan') => {
   activeTab.value = tabName
   localStorage.setItem('activeTab', tabName)
 }
 
 onMounted(() => {
-  const savedTab = localStorage.getItem('activeTab') as 'home' | 'garden' | 'calendar' | null
+  const savedTab = localStorage.getItem('activeTab') as 'home' | 'garden' | 'calendar' | 'plan' | null
   if (savedTab) {
     activeTab.value = savedTab
   }
@@ -89,12 +90,20 @@ const quickStats = quickStatsData
         >
           📅 Garden Calendar
         </button>
+        <button
+          class="tab-button"
+          :class="{ active: activeTab === 'plan' }"
+          @click="switchTab('plan')"
+        >
+          📝 Garden Plan
+        </button>
       </div>
 
       <!-- Tab Content -->
       <HomeTab v-if="activeTab === 'home'" />
       <GardenTab v-if="activeTab === 'garden'" />
       <GardenCalendarTab v-if="activeTab === 'calendar'" />
+      <GardenPlanTab v-if="activeTab === 'plan'" />
     </div>
   </div>
 </template>

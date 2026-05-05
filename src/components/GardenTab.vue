@@ -1,5 +1,72 @@
 <template>
   <div class="garden-tab">
+    <!-- Column 2: February Planting Plan -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">❄️</span>
+        February Planting Plan
+      </div>
+
+      <div class="section-title">🏠 Start Indoors</div>
+      <div
+        v-for="(plant, index) in gardenData.februaryPlanting.startIndoors"
+        :key="`feb-start-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
+        <div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
+        </div>
+      </div>
+
+      <div class="section-title">🌱 Direct Sow</div>
+      <div
+        v-for="(plant, index) in gardenData.februaryPlanting.directSow"
+        :key="`feb-direct-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
+        <div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 3: March Planting Plan -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-icon">🌱</span>
+        March Planting Plan
+      </div>
+
+      <div class="section-title">🏠 Start Indoors</div>
+      <div
+        v-for="(plant, index) in gardenData.marchPlanting.startIndoors"
+        :key="`march-start-${index}`"
+        class="plant-item"
+        :class="plant.type"
+      >
+        <span class="plant-emoji">{{ plant.emoji }}</span>
+        <div>
+          <div class="plant-name">
+            {{ plant.name }}
+            <span v-if="plant.haveSeeds" class="seed-indicator">📦</span>
+          </div>
+          <div class="plant-details">{{ plant.details }}</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Column 4: April Planting Plan -->
     <div class="card">
       <div class="card-header">

@@ -431,6 +431,14 @@ import calendarData from '../data/calendarData.json'
   font-weight: 600;
 }
 
+.crop-bar.completed {
+  background: #e0e7ff !important;
+  border: none;
+  color: #4338ca;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
 /* Stacked crops in same bed */
 .crop-bar.stacked-top {
   height: 18px;
