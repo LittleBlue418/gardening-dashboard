@@ -81,7 +81,7 @@ const quickStats = quickStatsData
           :class="{ active: activeTab === 'garden' }"
           @click="switchTab('garden')"
         >
-          🌱 Garden
+          🌱 Planting Plan
         </button>
         <button
           class="tab-button"

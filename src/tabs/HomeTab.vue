@@ -18,101 +18,43 @@
       </div>
     </Section>
 
-    <!-- Column 2: Upcoming -->
-    <Section emoji="📆" title="Upcoming">
-      <div v-if="homeData.upcomingEvents.length === 0" class="upcoming-item">
-        No upcoming events
-      </div>
-      <template v-else v-for="(dateSection, index) in homeData.upcomingEvents" :key="index">
-        <div class="upcoming-date-section">{{ dateSection.date }}</div>
-        <div
-          v-for="(event, eventIndex) in dateSection.events"
-          :key="`${index}-${eventIndex}`"
-          class="upcoming-item"
-          :class="event.type"
-        >
-          {{ event.title }}
-        </div>
-      </template>
-    </Section>
-
-    <!-- Column 3: Prioritised Tasks -->
-    <Section emoji="⭐" title="Prioritised Tasks">
-      <div class="section-title">Priority 1</div>
-      <template v-for="task in priority1Tasks" :key="task.id">
-        <div class="priority-item">
-          <label>
-            <input
-              type="checkbox"
-              v-model="checkboxes[task.id]"
-              @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
-            >
-            {{ task.title }}
-          </label>
-        </div>
-      </template>
-
-      <div class="section-title">Priority 2</div>
-      <template v-for="task in priority2Tasks" :key="task.id">
-        <div class="priority-item">
-          <label>
-            <input
-              type="checkbox"
-              v-model="checkboxes[task.id]"
-              @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
-            >
-            {{ task.title }}
-          </label>
-        </div>
-      </template>
-    </Section>
-
-    <!-- Column 4: General To-Do -->
-    <Section emoji="📝" title="General To-Do">
+    <!-- Column 2: Shopping -->
+    <Section emoji="🛒" title="Shopping">
       <div
-        v-for="task in homeData.generalTodo"
-        :key="task.id"
-        class="todo-item"
+        v-for="(item, index) in gardenData.shoppingList"
+        :key="`shopping-${index}`"
+        class="shopping-item"
       >
-        <label>
-          <input
-            type="checkbox"
-            v-model="checkboxes[task.id]"
-            @change="saveCheckbox(task.id.replace(/(\d+)$/, '-$1'))"
-          >
-          {{ task.title }}
-        </label>
+        <span class="plant-emoji">{{ item.emoji }}</span>
+        <div class="shopping-item-text">{{ item.name }}</div>
       </div>
     </Section>
+
+    <!-- Seed Inventory (Full Width) -->
+    <div class="full-width">
+      <Section emoji="📦" title="Seed Inventory">
+        <div class="seed-grid">
+        <div
+          v-for="(seed, index) in gardenData.seedInventory"
+          :key="`seed-${index}`"
+          class="seed-item"
+        >
+          <span class="seed-name">{{ seed.name }}</span>
+          <span class="seed-quantity">{{ seed.quantity }}</span>
+        </div>
+      </div>
+      </Section>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import homeDataRaw from '../data/homeData.json'
+import gardenData from '../data/gardenData.json'
 import Section from '../components/Section.vue'
 
-interface UpcomingEvent {
-  title: string
-  type: string
-}
-
-interface DateSection {
-  date: string
-  events: UpcomingEvent[]
-}
-
 interface HomeData {
-  upcomingEvents: DateSection[]
-  prioritisedTasks: Array<{
-    id: string
-    title: string
-    isPriority2?: boolean
-  }>
-  generalTodo: Array<{
-    id: string
-    title: string
-  }>
   gardenTodo: Array<{
     id: string
     title: string
@@ -170,14 +112,6 @@ const checkboxes = ref<Checkboxes>({
   garden7: false,
 })
 
-const priority1Tasks = computed(() =>
-  homeData.prioritisedTasks.filter(task => !task.isPriority2)
-)
-
-const priority2Tasks = computed(() =>
-  homeData.prioritisedTasks.filter(task => task.isPriority2)
-)
-
 const saveCheckbox = (id: string) => {
   const key = id.replace('-', '')
   const value = checkboxes.value[key as keyof Checkboxes]
@@ -205,66 +139,6 @@ onMounted(() => {
   display: contents;
 }
 
-.section-title {
-  font-weight: 600;
-  color: #555;
-  margin: 10px 0 6px 0;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.upcoming-date-section {
-  font-weight: 600;
-  color: #555;
-  margin: 10px 0 6px 0;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.upcoming-date-section:first-child {
-  margin-top: 0;
-}
-
-.upcoming-item {
-  padding: 8px 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  font-size: 13px;
-  color: #333;
-}
-
-.upcoming-item.today {
-  background: #fee2e2;
-  border-left: 3px solid #dc2626;
-}
-
-.upcoming-item.future {
-  background: #dbeafe;
-  border-left: 3px solid #3b82f6;
-}
-
-.priority-item {
-  background: #fef3c7;
-  padding: 8px 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border-left: 3px solid #f59e0b;
-}
-
-.priority-item input[type="checkbox"] {
-  margin-right: 8px;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
-.priority-item label {
-  font-size: 13px;
-  font-weight: 600;
-}
-
 .todo-item {
   background: #fff9e6;
   padding: 8px 10px;
@@ -282,5 +156,74 @@ onMounted(() => {
 
 .todo-item label {
   font-size: 13px;
+}
+
+.shopping-item {
+  background: #fed7aa;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-left: 3px solid #f97316;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shopping-item-text {
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+.plant-emoji {
+  font-size: 18px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.seed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.seed-item {
+  background: #f8f9fa;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-left: 3px solid #10b981;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.seed-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.seed-quantity {
+  background: #10b981;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .seed-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .seed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>

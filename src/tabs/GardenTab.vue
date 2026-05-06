@@ -223,34 +223,6 @@
         </div>
       </template>
     </Section>
-
-    <!-- Column 8: Gardening Shopping -->
-    <Section emoji="🛒" title="Gardening Shopping">
-      <div
-        v-for="(item, index) in gardenData.shoppingList"
-        :key="`shopping-${index}`"
-        class="shopping-item"
-      >
-        <span class="plant-emoji">{{ item.emoji }}</span>
-        <div class="shopping-item-text">{{ item.name }}</div>
-      </div>
-    </Section>
-
-    <!-- Seed Inventory (Full Width) -->
-    <div class="full-width">
-      <Section emoji="📦" title="Seed Inventory">
-        <div class="seed-grid">
-        <div
-          v-for="(seed, index) in gardenData.seedInventory"
-          :key="`seed-${index}`"
-          class="seed-item"
-        >
-          <span class="seed-name">{{ seed.name }}</span>
-          <span class="seed-quantity">{{ seed.quantity }}</span>
-        </div>
-      </div>
-      </Section>
-    </div>
   </div>
 </template>
 
@@ -339,70 +311,5 @@ import Section from '../components/Section.vue'
 
 .seedling-item .plant-details {
   font-size: 11px;
-}
-
-.shopping-item {
-  background: #fed7aa;
-  padding: 8px 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border-left: 3px solid #f97316;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.shopping-item-text {
-  font-weight: 600;
-  color: #333;
-  font-size: 13px;
-}
-
-.full-width {
-  grid-column: 1 / -1;
-}
-
-.seed-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.seed-item {
-  background: #f8f9fa;
-  padding: 7px 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border-left: 3px solid #10b981;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-}
-
-.seed-name {
-  font-weight: 600;
-  color: #333;
-}
-
-.seed-quantity {
-  background: #10b981;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-@media (max-width: 1200px) {
-  .seed-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .seed-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 </style>
